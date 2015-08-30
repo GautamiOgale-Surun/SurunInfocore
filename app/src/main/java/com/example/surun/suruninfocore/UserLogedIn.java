@@ -107,6 +107,7 @@ public class UserLogedIn extends ActionBarActivity {
 
     //Global Offercount.
     public int offerCount=1;
+    public boolean globalExcutionFlag=true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -190,8 +191,16 @@ public class UserLogedIn extends ActionBarActivity {
                 //While uploading image from server these name and format should be followed.
                 //for(offerCount=1; offerCount <= 3; offerCount++) {
                     new LoadImage().execute("http://www.surun.co/tuljaifilms/images/SS4.jpg");
+                }
+                /*
+                    Log.v(TAG,"OfferCounter :"+offerCount);
+                    new LoadImage().execute("http://www.surun.co/tuljaifilms/images/SS4.jpg");
+                    offerCount++;
+                 */
+
+
                 //}
-            }
+
         });
 
 
@@ -573,6 +582,9 @@ public class UserLogedIn extends ActionBarActivity {
                     else if (offerCount == 3)
                         imageOfferThree.setImageBitmap(image);
                     pDialog.dismiss();
+                    offerCount++;
+                    if(offerCount < 4)
+                    new LoadImage().execute("http://www.surun.co/tuljaifilms/images/SS4.jpg");
                 } else {
                     pDialog.dismiss();
                     Toast.makeText(UserLogedIn.this, "Image Does Not exist or Network Error", Toast.LENGTH_SHORT).show();
