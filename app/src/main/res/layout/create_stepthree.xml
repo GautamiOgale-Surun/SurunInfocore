@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom|end"
+    android:background="#fff"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:id="@+id/case_description"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="10dp"
+            android:hint="@string/description_text"
+            android:background="@drawable/edittext_surun"
+            android:paddingLeft="20dp" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit Request"
+        android:id="@+id/submitDataTicket"
+        android:layout_gravity="center"
+        android:background="@drawable/button"
+        android:layout_marginLeft="23dp"
+        android:layout_marginRight="13dp"
+        android:textColor="#ffffffff"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>

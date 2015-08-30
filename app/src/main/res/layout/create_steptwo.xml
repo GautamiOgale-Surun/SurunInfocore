@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:background="#fff">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/horizontalScrollView2"
+        android:layout_marginRight="10dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <include
+                layout="@layout/create_ticket_image_view_custom"
+                android:layout_marginLeft="23dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgvw1" />
+
+            <include
+                layout="@layout/create_ticket_image_view_custom"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgvw2" />
+
+            <include
+                layout="@layout/create_ticket_image_view_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/imgvw3" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Take a Picture"
+        android:id="@+id/camera"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#ffffffff" />
+</LinearLayout>
